@@ -3,12 +3,10 @@ import Layout from "../layout/Layout";
 function Home() {
 
     return (
-        <Layout>
-            <h1>
+             <div className="section--initial">
                 bem vindo 
-            </h1>
-        </Layout>
-    )
+            </div>
+     )
 }
 
 export default Home;

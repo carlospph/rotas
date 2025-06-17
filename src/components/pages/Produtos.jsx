@@ -1,9 +1,9 @@
 function About(){
 
     return(
-        <>
-            About      
-        </>
+        <div className="section--initial">
+            produtos      
+        </div>
     )
 }
 
