@@ -7,12 +7,23 @@
   max-width: 220px;
   box-shadow: 0 2px 2px 2px #ccc;
   margin: 1rem 0;
-  padding: 1rem 2rem;
+  padding:2rem;
   min-width: 100%;
 
     @media (max-width:769px){
       display: none;
     }
+}
+
+.sidebarMobile{
+  border:1px solid red;
+  border-radius: 6px;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+
+  @media (min-width:769px){
+    display: none;
+  }
 }
 
 h3.titleFilter{
@@ -29,8 +40,20 @@ h4.titleFilter{
 
 .dflex {
   display: flex;
+  align-self: start;
   align-items: center;
   gap: 3px;
+  padding: .4em;
+}
+
+.dflex input{
+  width:auto;
+ }
+
+.dflex label{
+  font-weight: normal;
+  margin: 0;
+
 }
 
 .checkbox,

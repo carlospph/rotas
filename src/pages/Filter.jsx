@@ -1,67 +1,50 @@
 import React from 'react';
-import { Card } from '../components/card/Card'; 
+import { Card } from '../components/card/Card';
 import styles from './GlobalPage.module.css';
+import { useState } from 'react';
+import { ItemFilter } from '../components/itemFilter/ItemFilter';
+import { Title } from '../components/itemFilter/Title';
 
 export const Filter = () => {
+
+  const [filter, setFilter] = useState(false);
+
   return (
     <div>
       <div className={styles.container__page__filter}>
+
+        <button onClick={() => setFilter(!filter)} className={styles.btnFilter}>
+          <i className="fa-solid fa-filter"></i>
+        </button>
+
+        {/* aqui */}
+
         <div className={styles.sidebar}>
-          <h3 className={styles.titleFilter}>Pesquisar por: </h3>
 
-           <h4 className={styles.titleFilter}>Marca</h4>
-          
-          <div className={styles.dflex}>
-            <input type="checkbox" name="brand" id="nike-brand" className={styles.checkbox} />
-            <label htmlFor="nike-brand" className={styles.label}>Nike</label>
-          </div>
+          <Title title="Filtrar por" />
 
-          <div className={styles.dflex}>
-            <input type="checkbox" name="brand" id="adidas-brand" className={styles.checkbox} />
-            <label htmlFor="adidas-brand" className={styles.label}>Adidas</label>
-          </div>
+          <Title title="Marca" />
 
-          <div className={styles.dflex}>
-            <input type="checkbox" name="brand" id="puma-brand" className={styles.checkbox} />
-            <label htmlFor="puma-brand" className={styles.label}>Puma</label>
-          </div>
+          <ItemFilter className={styles.dflex} label="Nike" id="nike" name="marca" value="Nike" />
+          <ItemFilter className={styles.dflex} label="Adidas" id="adidas" name="marca" value="Adidas" />
+          <ItemFilter className={styles.dflex} label="Puma" id="puma" name="marca" value="Puma" />
+          <ItemFilter className={styles.dflex} label="Reebok" id="reebok" name="marca" value="Reebok" />
+          <ItemFilter className={styles.dflex} label="Under Armour" id="underarmour" name="marca" value="Under Armour" />
 
-          <div className={styles.dflex}>
-            <input type="checkbox" name="brand" id="reebok-brand" className={styles.checkbox} />
-            <label htmlFor="reebok-brand" className={styles.label}>Reebok</label>
-          </div>
+          <Title title="Categoria" />
 
-          {/* --- Filtro por Categoria --- */}
-          <h4 className={styles.titleFilter}>Categorias</h4>
 
-          <div className={styles.dflex}>
-            <input type="checkbox" name="category" id="shoes-category" className={styles.checkbox} />
-            <label htmlFor="shoes-category" className={styles.label}>Calçados</label>
-          </div>
+          <ItemFilter className={styles.dflex} label="Calçados" id="calcados" name="categoria" value="Calçados" />
+          <ItemFilter className={styles.dflex} label="Roupas" id="roupas" name="categoria" value="Roupas" />
+          <ItemFilter className={styles.dflex} label="Acessórios" id="acessorios" name="categoria" value="Acessórios" />
 
-          <div className={styles.dflex}>
-            <input type="checkbox" name="category" id="apparel-category" className={styles.checkbox} />
-            <label htmlFor="apparel-category" className={styles.label}>Vestuário</label>
-          </div>
-
-          <div className={styles.dflex}>
-            <input type="checkbox" name="category" id="accessories-category" className={styles.checkbox} />
-            <label htmlFor="accessories-category" className={styles.label}>Acessórios</label>
-          </div>
-
-           <div className={styles.dflex}>
-            <input type="checkbox" name="category" id="sportswear-category" className={styles.checkbox} />
-            <label htmlFor="sportswear-category" className={styles.label}>Esportivo</label>
-          </div> 
-        </div>  
-
-<button className={styles.btnFilter}>
-            <i className="fa-solid fa-filter"></i>
-          </button>
-        <div className={styles.container__cards__filter}>
-          <Card />  
         </div>
-      </div>  
+
+        <div className={styles.container__cards__filter}>
+          <Card />
+        </div>
+
+      </div>
     </div>
   );
 };

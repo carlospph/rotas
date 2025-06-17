@@ -1,6 +1,6 @@
 header {
 	box-shadow: 0 2px 2px 2px rgb(0, 0, 0, 0.1);
-	padding: 0 1rem;
+	padding: 0;
 	position: fixed;
 	width: 100%;
 	background: white;
@@ -18,13 +18,14 @@ header {
 	grid-template-areas: 'logo field actions carrinho'
 		'containerMenu containerMenu containerMenu containerMenu';
 	align-items: center;
-	gap: 18px;
+	gap: 1px;
 	margin: 0 auto;
 	max-width: 1200px;
 	padding: 0 1rem;
 
 	@media (max-width: 769px) {
 		grid-template-columns: 60px 3fr 2fr 40px;
+		gap: 1rem;
 	}
 }
 
