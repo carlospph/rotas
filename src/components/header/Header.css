@@ -173,8 +173,7 @@ a.active {
 		flex-direction: column;
 		gap: .8rem;
 	}
- 
-	
+
 	.field-computer {
 		display: none;
 	}
@@ -182,13 +181,12 @@ a.active {
 	.onlyComputer {
 		display: none;
 	}
-
-	.onlyMobile{
-		display: block;
-	}
-	.mobile-menu {
-		min-height: 100vh;
-	}
+	
+.onlyMobile {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
 
 	ul.mobile-menu {
 		margin: 0 0 0 1rem;
