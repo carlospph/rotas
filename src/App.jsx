@@ -1,13 +1,18 @@
-import Paths from "./components/routes/Paths"
+import "./App.css";
+// import DetalhesProutos from "./components/Detalhes/DetalhesProutos";
 
- 
-function App() { 
+import { Paths } from "./route/Paths";
 
+function App() {
   return (
-   <>
-   <Paths/>
-   </>
-  )
+    <>
+        <Paths />  
+
+      {/* <DetalhesProutos/> /cada produto - cada tenis, tamanho, cor e outros/*/}
+    </> 
+
+      
+  );
 }
 
-export default App
+export default App;
