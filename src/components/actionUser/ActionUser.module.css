@@ -1,26 +1,31 @@
-.flex__actionUser{
+ .dflex{
+	display: flex;
+	gap: 1rem;
+ 	width: fit-content;
+	margin-top: 4rem;
+	border-top: 1px solid brown;
+	padding: 2rem 0;
+	border-top: 2px solid #ccc;
+
+			@media (min-width: 769px){
+				margin-top: 0;
+				border: 0;
+			}
+ }
+
+ .dflex .link{
+	text-decoration: underline;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: 1rem;
-}
+	padding: .6em 1rem;
+	white-space: nowrap;;
+ }
 
-.link__register{
-	color: black;
-	text-decoration:underline;
-	white-space: nowrap;
-}
-
-.link__btn{
-	background: var(--primary);
-	color: white;
-	padding: .5rem 2rem;
-	border-radius: 6px;
-	font-size: 1rem;
-	font-weight: 700;
-	transition: background 0.3s ease;
-}
-
-.link__btn:hover{
-	opacity: 0.8;
-}
+ .dflex .btn{
+	background-color: var(--primary);
+	display: flex;
+	align-items: center;
+	border-radius:5px;
+	color: var(--white);
+	padding: .6em 1rem;
+ }

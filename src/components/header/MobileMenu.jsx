@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import './Header.css';
+import { ActionUser } from "../actionUser/ActionUser";
  
 export const MobileMenu = () => {
 
@@ -16,6 +17,10 @@ export const MobileMenu = () => {
             </li>
             <li>
                 <NavLink className="link" to="/MeusPedidos">Meus pedidos</NavLink>
+            </li>
+
+            <li>
+                <ActionUser/>
             </li>
         </ul> 
     )
