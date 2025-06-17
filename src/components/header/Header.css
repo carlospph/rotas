@@ -173,7 +173,8 @@ a.active {
 		flex-direction: column;
 		gap: .8rem;
 	}
-
+ 
+	
 	.field-computer {
 		display: none;
 	}
