@@ -86,7 +86,7 @@ header {
 	grid-area: containerMenu;
 	max-width: 1200px;
 	margin: 0 auto;
-}
+ }
 
 .menu {
 	padding: 0;
@@ -166,14 +166,7 @@ a.active {
 	.actions {
 		display: none;
 	}
-
-	.menu {
-		padding: 0 1rem;
-		margin: 0;
-		display: flex;
-		flex-direction: column;
-		gap: .8rem;
-	}
+	
 
 	.field-computer {
 		display: none;
@@ -182,12 +175,12 @@ a.active {
 	.onlyComputer {
 		display: none;
 	}
-	
-.onlyMobile {
-	display: flex;
-	margin: 0;
-	padding: 0;
-}
+
+	.onlyMobile {
+		display: flex;
+		margin: 0;
+		padding: 0;
+	}
 
 	ul.mobile-menu {
 		margin: 0 0 0 1rem;
