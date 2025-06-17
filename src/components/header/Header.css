@@ -55,6 +55,7 @@ header{
  .field{
 	margin-top: 1.5rem;
 	width: 100%;
+	display: none;
  }
 
  .field input, .field-computer input{
@@ -128,15 +129,18 @@ a.active{
 
 	.header-container{
 		display: grid;
-		grid-template-areas: 'field field field field fiedl'
+		grid-template-areas: 'field field field field field'
 		'hamburguer logo logo btnSearch carrinho' 
 		'containerMenu containerMenu containerMenu containerMenu containerMenu';
-		padding: 0 1rem;
+		padding: 0rem 1rem;
+		align-items: center;
 	}
 
 	.field{
 		display: flex;
 		grid-area: field;
+		width: 100%;
+		margin: 1em auto 0;
 	}
 
 	.hamburguer{
